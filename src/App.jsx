@@ -9,20 +9,12 @@ const API_KEY = "0cdbc003f6410956a00f0814afe5fc18"
 
 function App() {
   const [state, setState] = useState({
-    temp: '',
-    city: '',
-    precipitation: '',
-    image: '',
-    error: '',
+    temp: "",
+    city: "",
+    precipitation: "",
+    image: "",
+    error: "",
   })
-
-  // let [date, setDate] = useEffect(() => {
-  //   const date = new Date()
-  //   const month = (date.getMonth()+1).toString()
-  //   const day = date.getDate().toString()
-
-  //   return `${date.getFullYear()}-${month.length === 2 ? month : `0${month}`}-${day.length === 2 ? day : `0${day}`}`
-  // })
 
   const gettingWeather = async (event) => {
     event.preventDefault()
@@ -32,17 +24,16 @@ function App() {
     )
     const data = await api_url.json()
     const date = new Date()
-    console.log(date);
+    console.log(date)
     console.log(data)
 
     setState({
       temp: data.main.temp,
       city: data.name,
       precipitation: data.weather[0].description,
-      image: data.weather[0].icon
+      image: data.weather[0].icon,
     })
-    console.log(temp);
-
+    console.log(temp)
   }
 
   return (
