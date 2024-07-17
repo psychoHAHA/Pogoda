@@ -1,7 +1,5 @@
 import "./Main.css"
 
-import image from "../images/01d@2x.png"
-
 function Main({ data }) {
 
   const date = new Date()
