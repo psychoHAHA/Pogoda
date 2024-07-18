@@ -34,6 +34,8 @@ function App() {
       image: data.weather[0].icon,
     })
     console.log(temp)
+    
+    return
   }
 
   return (
